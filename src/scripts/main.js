@@ -52,7 +52,9 @@ const secondPromise = new Promise((resolve) => {
     rightClicked = true;
 
     resolve('Second promise was resolved');
-  });
+  },
+  { once: true },
+);
 });
 
 secondPromise.then((data) => {
